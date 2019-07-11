@@ -88,8 +88,8 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknifeVersion}"
     //EasyPermissions
     implementation "pub.devrel:easypermissions:${rootProject.ext.easypermissionsVersion}"
-    //okHttp
-    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpVersion}"
+    //okHttp (retrofit中已经存在)
+    //implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpVersion}"
     //rxjava  rxAndroid
     implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidVersion}"
     implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjavaVersion}"

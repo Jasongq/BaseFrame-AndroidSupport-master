@@ -2,9 +2,6 @@ package com.jiuye.baseframe.base;
 
 import android.os.Bundle;
 
-import com.jiuye.baseframe.mvp.IBasePresenter;
-import com.jiuye.baseframe.mvp.IBaseView;
-
 import java.lang.ref.WeakReference;
 
 /**

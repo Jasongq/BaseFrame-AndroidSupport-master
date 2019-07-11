@@ -12,8 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-import com.jiuye.baseframe.mvp.IBasePresenter;
-import com.jiuye.baseframe.mvp.IBaseView;
 import com.jiuye.baseframe.util.LoadingUtil;
 import com.jiuye.baseframe.util.XLog;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;

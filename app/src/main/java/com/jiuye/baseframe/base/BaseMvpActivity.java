@@ -3,9 +3,6 @@ package com.jiuye.baseframe.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.jiuye.baseframe.mvp.IBasePresenter;
-import com.jiuye.baseframe.mvp.IBaseView;
-
 /**
  * author : GuoQiang
  * e-mail : 849199845@qq.com
