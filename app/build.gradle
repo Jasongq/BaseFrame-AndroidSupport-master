@@ -13,8 +13,8 @@ android {
 
         multiDexEnabled true
         ndk { //选择要添加的对应cpu类型的.so库。
-            abiFilters 'armeabi-v7a'
-            /*'armeabi', , 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'*/
+            abiFilters 'armeabi-v7a','x86'
+            /*'armeabi', , 'armeabi-v8a',, 'x86_64', 'mips', 'mips64'*/
         }
     }
     signingConfigs {
@@ -88,15 +88,6 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknifeVersion}"
     //EasyPermissions
     implementation "pub.devrel:easypermissions:${rootProject.ext.easypermissionsVersion}"
-    //okHttp (retrofit中已经存在)
-    //implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpVersion}"
-    //rxjava  rxAndroid
-    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidVersion}"
-    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjavaVersion}"
-    //Retrofit
-    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofitVersion}"
     //SmartRefreshLayout -alpha-21
     implementation "com.scwang.smartrefresh:SmartRefreshLayout:${rootProject.ext.SmartRefreshLayoutVersion}"
     //eventbus

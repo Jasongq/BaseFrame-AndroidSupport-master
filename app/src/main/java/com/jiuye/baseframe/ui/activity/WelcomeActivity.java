@@ -45,7 +45,8 @@ public class WelcomeActivity extends BaseActivity implements EasyPermissions.Per
     @Override
     protected void initData() {
         versionCodeTv.setText(String.format("v%1$s", AppUtil.getVersionName(this)));
-        GlideUtil.load(this, R.drawable.welcome, image);
+        image.setImageResource(R.drawable.welcome);
+        //GlideUtil.load(this, R.drawable.welcome, image);
         if (EasyPermissions.hasPermissions(this, CommonTools.COMMON_PERMISSION)) {
             goNext();
         } else {

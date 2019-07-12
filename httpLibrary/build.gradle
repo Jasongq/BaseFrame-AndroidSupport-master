@@ -21,14 +21,17 @@ android {
 }
 
 dependencies {
+    //implementation
+    //okHttp  (retrofit包中也存在okhttp,非最新版本,如需使用最新版可使用 exclude group排除retrofit中的okhttp)
+    api "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpVersion}"
     //rxjava  rxAndroid
-    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjavaVersion}"
-    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidVersion}"
+    api "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjavaVersion}"
+    api "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidVersion}"
     //Retrofit
-    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-scalars:${rootProject.ext.retrofitVersion}"
+    api ('com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}'){ exclude group:'com.squareup.okhttp3',module:'okhttp' }
+    api "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVersion}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofitVersion}"
+    api "com.squareup.retrofit2:converter-scalars:${rootProject.ext.retrofitVersion}"
     //Log日志
-    //implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.logInterceptorVersion}"
+    //api "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.logInterceptorVersion}"
 }
